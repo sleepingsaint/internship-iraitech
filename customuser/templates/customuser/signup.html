@@ -1,0 +1,25 @@
+{% extends 'customuser/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>Sign up</h2>
+<hr />
+{% if messages %}
+{% for msg in messages %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+<br />
+<p>Already have an account? <a href="/accounts/login">Click Here</a></p>
+{% endblock %}
