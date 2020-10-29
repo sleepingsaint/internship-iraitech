@@ -14,7 +14,7 @@ def loginView(req):
         user = authenticate(username=email, password=password)
         if user is not None:
             login(req, user)
-            return redirect('/')
+            return redirect('/api/v1/calculate')
         messages.error(req, "Invalid email and password")
 
     form = AuthenticationForm()
@@ -27,7 +27,7 @@ def signup(req):
         if form.is_valid():
             user = form.save()
             login(req, user)
-            return redirect('/')
+            return redirect('/api/v1/calculate')
         messages.error(req, "email is already taken")
 
     form = UserCreationForm()

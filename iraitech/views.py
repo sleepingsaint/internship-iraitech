@@ -23,9 +23,8 @@ def q1_recursive(x, n):
     return tempResult + q1_recursive(x, n - 1)
 
 
-# n denotes the sequence
 def q2(n):
-    if len(n) % 2 == 0:
+    if n % 2 == 0:
         return (n + 1) ** 2 + 1
 
     return (n + 1) ** 2 - 1
@@ -33,11 +32,6 @@ def q2(n):
 
 def q3(x, y, a, b):
     return (x / y) ** (a + b)
-
-
-@login_required()
-def question1(req):
-    return render(req, "iraitech/question1.html")
 
 
 @login_required()
@@ -50,4 +44,4 @@ def calculate(req):
         print(n)
         ans = q1_recursive(x, n)
         return JsonResponse({"answer": ans})
-    return JsonResponse({"error": "This route is accessible only through post request"})
+    return render(req, 'iraitech/question1.html')
