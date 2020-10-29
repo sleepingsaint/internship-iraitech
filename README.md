@@ -24,8 +24,10 @@
 3. Starting the application
 
     ```
-    python manage.py runserver 0.0.0.0:9000
+    python manage.py runserver localhost:9000
     ```
+
+4. Open the browser and enter the url http://localhost:9000 to access the app
 
 ## About Me
 
