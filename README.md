@@ -17,7 +17,7 @@
 2. Creating user tables
 
     ```
-    python manage.py makemigrations
+    python manage.py makemigrations customuser
     python manage.py migrate
     ```
 
