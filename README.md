@@ -6,7 +6,7 @@
 1. Clone the repository and cd into root directory of the project    
     ```
     git clone git@github.com:sleepingsaint/internship-iraitech.git 
-    cd internship
+    cd internship-iraitech
     ```
 
 1. Installing dependencies
